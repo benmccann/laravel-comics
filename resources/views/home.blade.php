@@ -9,7 +9,8 @@
         <!-- FONT AWESOME 6.4.0 -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-
+        <!-- Include assets with vite directive -->
+        @vite('resources/js/app.js')
         <!-- Adesso stiamo usando yield, e se nelle pagine successive qualcuno mette un titolo, allora il titolo della pagina sarà il titolo scelto, sennò in automatico, di default, il titolo sarà "Laravel Comics" -->
         <title>@yield('title', 'Laravel Comics')</title>
     </head>

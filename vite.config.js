@@ -1,11 +1,17 @@
 import { defineConfig } from 'vite';
-import laravel from 'laravel-vite-plugin';
+const laravelPlugin = require('laravel-vite-plugin'); // Use CommonJS require syntax
 
 export default defineConfig({
     plugins: [
-        laravel({
-            input: ['resources/css/app.css', 'resources/js/app.js'],
+        laravelPlugin({
+            input: ['resources/scss/app.scss', 'resources/js/app.js'],
             refresh: true,
         }),
     ],
+    resolve: {
+        alias: {
+            '~bootstrap': path.resolve(__dirname, 'node_modules/bootstrap'),
+            '~resources': '/resources/'
+        }
+    }
 });
