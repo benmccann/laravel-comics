@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-const laravelPlugin = require('laravel-vite-plugin'); // Use CommonJS require syntax
+import laravelPlugin from 'laravel-vite-plugin';
 
 export default defineConfig({
     plugins: [
